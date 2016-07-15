@@ -14,13 +14,13 @@
         android:paddingRight="24dp"
         android:weightSum="1">
 
-        <ImageView android:src="@drawable/favicon"
+<!--        <ImageView android:src="@drawable/favicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.12" />
-
+            android:layout_weight="0.12"/>
+-->
         <!--  Name Label -->
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"

@@ -62,7 +62,7 @@ public class MainHomeActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        Main_Screen_Card_Adapter main_screen_card_adapter = new Main_Screen_Card_Adapter();
+//        Main_Screen_Card_Adapter main_screen_card_adapter = new Main_Screen_Card_Adapter();
 
 
 

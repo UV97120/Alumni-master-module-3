@@ -87,7 +87,8 @@
 
         <activity
             android:name=".Contact"
-            android:label="@string/title_activity_contact"></activity>
+            android:label="@string/title_activity_contact" />
+        <activity android:name=".Enquiry"></activity>
     </application>
 
 </manifest>

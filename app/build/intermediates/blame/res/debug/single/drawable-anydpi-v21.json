@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/nnf_ic_create_new_folder_white_24dp.xml",
-        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.5.3/res/drawable-anydpi-v21/nnf_ic_create_new_folder_white_24dp.xml"
+        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\nnf_ic_create_new_folder_white_24dp.xml",
+        "source": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\exploded-aar\\com.nononsenseapps\\filepicker\\2.5.3\\res\\drawable-anydpi-v21\\nnf_ic_create_new_folder_white_24dp.xml"
     },
     {
-        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/nnf_ic_folder_black_48dp.xml",
-        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.5.3/res/drawable-anydpi-v21/nnf_ic_folder_black_48dp.xml"
+        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\nnf_ic_folder_black_48dp.xml",
+        "source": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\exploded-aar\\com.nononsenseapps\\filepicker\\2.5.3\\res\\drawable-anydpi-v21\\nnf_ic_folder_black_48dp.xml"
     }
 ]

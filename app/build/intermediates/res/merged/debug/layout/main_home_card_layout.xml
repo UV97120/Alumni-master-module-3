@@ -3,11 +3,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
-
+    android:layout_margin="20dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imageViewContent" />
 
         <TextView
             android:text="TextView"
@@ -23,7 +27,6 @@
 
         <TextView
             android:text="TextView"
-            android:textColor="@android:color/darker_gray"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textTitle"
@@ -32,7 +35,6 @@
             android:id="@+id/textViewContent"
             android:textSize="16sp"/>
         <TextView
-            android:textColor="@android:color/holo_blue_dark"
             android:layout_marginLeft="22dp"
             android:layout_marginStart="22dp"
             android:layout_marginTop="18dp"
@@ -43,50 +45,16 @@
             android:layout_toEndOf="@+id/imageViewContent"
             android:id="@+id/textViewTimeStamp"/>
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:id="@+id/imageViewContent"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
         <TextView
-            android:textColor="@android:color/holo_blue_dark"
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/textViewTimeStamp"
-            android:layout_toRightOf="@+id/textViewTimeStamp"
-            android:layout_toEndOf="@+id/textViewTimeStamp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginStart="25dp"
-            android:id="@+id/Tag" />
-
-        <TextView
-            android:textColor="@android:color/holo_blue_dark"
-            android:layout_marginEnd="11dp"
-            android:layout_marginRight="11dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
             android:layout_width="60sp"
             android:layout_height="wrap_content"
             android:id="@+id/textViewUserName"
-            android:layout_alignBaseline="@+id/Branch"
-            android:layout_alignBottom="@+id/Branch"
+            android:layout_alignBaseline="@+id/textViewTimeStamp"
+            android:layout_alignBottom="@+id/textViewTimeStamp"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
-
-        <TextView
-            android:textColor="@android:color/holo_blue_dark"
-            android:text="TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Branch"
-            android:layout_marginLeft="18dp"
-            android:layout_marginStart="18dp"
-            android:layout_alignBaseline="@+id/Tag"
-            android:layout_alignBottom="@+id/Tag"
-            android:layout_toRightOf="@+id/Tag"
-            android:layout_toEndOf="@+id/Tag" />
 
 
     </RelativeLayout>

@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/nnf_ic_create_new_folder_white_24dp.png",
-        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.5.3/res/drawable-ldpi-v4/nnf_ic_create_new_folder_white_24dp.png"
+        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\nnf_ic_create_new_folder_white_24dp.png",
+        "source": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\exploded-aar\\com.nononsenseapps\\filepicker\\2.5.3\\res\\drawable-ldpi-v4\\nnf_ic_create_new_folder_white_24dp.png"
     },
     {
-        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/nnf_ic_folder_black_48dp.png",
-        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.5.3/res/drawable-ldpi-v4/nnf_ic_folder_black_48dp.png"
+        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\nnf_ic_folder_black_48dp.png",
+        "source": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\exploded-aar\\com.nononsenseapps\\filepicker\\2.5.3\\res\\drawable-ldpi-v4\\nnf_ic_folder_black_48dp.png"
+    },
+    {
+        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
+        "source": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.1\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
     }
 ]

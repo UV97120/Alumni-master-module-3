@@ -38,13 +38,13 @@
         </activity>
         <activity android:name=".Registration" />
         <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login" />
-        <activity
             android:name=".CardViewContent"
             android:label="@string/title_activity_card_view_content"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MainHomeActivity"></activity>
+        <activity android:name=".MainHomeActivity" />
+        <activity android:name=".Contact_Us" />
+        <activity android:name=".Login"></activity>
+        <activity android:name=".UpcomingEventsCorner"></activity>
     </application>
 
 </manifest>

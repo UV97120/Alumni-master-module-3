@@ -1,27 +1,29 @@
 package vishal.alumni;
 
-import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import java.util.ArrayList;
 
+import vishal.alumni.adapter.UpcomingEventsAdapter;
+import vishal.alumni.model.UpcomingEvents;
+import vishal.alumni.xmlParser.XMLParser_Upcoming_Events;
+
 public class MainHomeActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
-
-    ArrayList<String> Title;
-    ArrayList<String> Content;
-    ArrayList<String> Timestamp;
-    ArrayList<String> Username;
-    ArrayList<Bitmap> Image;
-
-
-
-
-
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,43 +31,35 @@ public class MainHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_home);
 
 
-        Title.add("Post 1");
-        Title.add("Post 2");
-        Title.add("Post 3");
-        Title.add("Post 4");
-        Title.add("Post 5");
-        Title.add("Post 6");
-
-        Content.add("Content 1     jsdfahjdf askjdhf alsdhfj dsjhf asdkjfh asdjkfh sdkfjh sadfkljhas dkfjh ");
-        Content.add("Content 2     jsdfahjdf askjdhf alsdhfj dsjhf asdkjfh asdjkfh sdkfjh sadfkljhas dkfjh ");
-        Content.add("Content 3     jsdfahjdf askjdhf alsdhfj dsjhf asdkjfh asdjkfh sdkfjh sadfkljhas dkfjh ");
-        Content.add("Content 4     jsdfahjdf askjdhf alsdhfj dsjhf asdkjfh asdjkfh sdkfjh sadfkljhas dkfjh ");
-        Content.add("Content 5     jsdfahjdf askjdhf alsdhfj dsjhf asdkjfh asdjkfh sdkfjh sadfkljhas dkfjh ");
-        Content.add("Content 6     jsdfahjdf askjdhf alsdhfj dsjhf asdkjfh asdjkfh sdkfjh sadfkljhas dkfjh ");
-
-
-        Timestamp.add("TimeStamp 1");
-        Timestamp.add("TimeStamp 2");
-        Timestamp.add("TimeStamp 3");
-        Timestamp.add("TimeStamp 4");
-        Timestamp.add("TimeStamp 5");
-        Timestamp.add("TimeStamp 6");
-
-        Username.add("User 1");
-        Username.add("User 2");
-        Username.add("User 3");
-        Username.add("User 4");
-        Username.add("User 5");
-        Username.add("User 6");
-
         recyclerView = (RecyclerView) findViewById(R.id.home_recycler_view);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        Main_Screen_Card_Adapter main_screen_card_adapter = new Main_Screen_Card_Adapter();
+
+        String url = "http://jarvismedia.tech/mayankwa/alumni/xml/upcoming_events.xml";
+        RequestQueue queue = Volley.newRequestQueue(this);
+        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @TargetApi(Build.VERSION_CODES.M)
+            @Override
+            public void onResponse(String response) {
+                //response = response.replaceAll("(?s)<!--.*?-->", "").trim();
+                //response = response.replaceAll("(?s)ï»¿<?.*?>", "").trim();
+                response = response.trim();
+                XMLParser_Upcoming_Events parser = new XMLParser_Upcoming_Events();
+                ArrayList<UpcomingEvents> list = parser.parse(response);
+                Log.d("Log", list.size()+"");
+                UpcomingEventsAdapter adapter = new UpcomingEventsAdapter(list, getBaseContext());
+                recyclerView.setAdapter(adapter);
+            }
 
 
 
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
 
+            }
+        });
+        queue.add(request);
     }
 }

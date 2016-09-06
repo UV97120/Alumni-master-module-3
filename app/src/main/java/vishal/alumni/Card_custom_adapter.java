@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import vishal.alumni.model.DataModel;
+
 public class Card_custom_adapter extends RecyclerView.Adapter<Card_custom_adapter.MyViewHolder>{
     private ArrayList<DataModel> dataSet;
 

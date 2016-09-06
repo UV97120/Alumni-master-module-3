@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -26,6 +27,8 @@ import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import vishal.alumni.model.DataModel;
 
 public class MainActivity extends AppCompatActivity {
     ExpandableListAdapter listAdapter;
@@ -131,9 +134,13 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.nav_why_join_ckp_alumni) {
-                    Toast.makeText(MainActivity.this, "Right Drawer - Why Join CKP Alumni", Toast.LENGTH_SHORT).show();
+                    //Intent intent = new Intent(MainActivity.this, RegistrationPhaseTwo.class);
+                    //startActivity(intent);
                 } else if (id == R.id.nav_upcoming_events) {
-                    Toast.makeText(MainActivity.this, "Right Drawer - Upcoming Events", Toast.LENGTH_SHORT).show();
+                    FragmentManager fm = getSupportFragmentManager();
+                    fm.beginTransaction().replace(R.id.main_container, new UpcomingEventsCorner()).commit();
+
+                    //Toast.makeText(MainActivity.this, "Right Drawer - Upcoming Events", Toast.LENGTH_SHORT).show();
                 }else if (id == R.id.nav_subscribe) {
                     Toast.makeText(MainActivity.this, "Right Drawer - Subscribtion", Toast.LENGTH_SHORT).show();
                 }
@@ -160,11 +167,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v,
                                         int groupPosition, long id) {
-                 Toast.makeText(getApplicationContext(),
-                 "Group Clicked " + listDataHeader.get(groupPosition),
-                 Toast.LENGTH_SHORT).show();
-                return false;
 
+                if(id == R.id.nav_contact)
+                {
+                    Toast.makeText(getApplicationContext(),
+                            "Group Clicked ",
+                            Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),
+                            "Group Clicked " + listDataHeader.get(groupPosition),
+                            Toast.LENGTH_SHORT).show();
+                }
+                return false;
             }
         });
 

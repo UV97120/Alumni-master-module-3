@@ -1601,9 +1601,30 @@
                     "startLine": 216,
                     "startColumn": 4,
                     "startOffset": 16137,
-                    "endLine": 225,
+                    "endLine": 222,
                     "endColumn": 12,
-                    "endOffset": 16645
+                    "endOffset": 16552
+                },
+                "from": {
+                    "file": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.miguelcatalan/materialsearchview/1.4.0/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 199,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 614
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 223,
+                    "startColumn": 4,
+                    "startOffset": 16557,
+                    "endLine": 232,
+                    "endColumn": 12,
+                    "endOffset": 17065
                 },
                 "from": {
                     "file": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
@@ -1619,12 +1640,12 @@
             },
             {
                 "to": {
-                    "startLine": 226,
+                    "startLine": 233,
                     "startColumn": 4,
-                    "startOffset": 16650,
-                    "endLine": 235,
+                    "startOffset": 17070,
+                    "endLine": 242,
                     "endColumn": 12,
-                    "endOffset": 17170
+                    "endOffset": 17590
                 },
                 "from": {
                     "file": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
@@ -1640,12 +1661,12 @@
             },
             {
                 "to": {
-                    "startLine": 236,
+                    "startLine": 243,
                     "startColumn": 4,
-                    "startOffset": 17175,
-                    "endLine": 245,
+                    "startOffset": 17595,
+                    "endLine": 252,
                     "endColumn": 12,
-                    "endOffset": 17850
+                    "endOffset": 18270
                 },
                 "from": {
                     "file": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
@@ -1661,11 +1682,11 @@
             },
             {
                 "to": {
-                    "startLine": 246,
+                    "startLine": 253,
                     "startColumn": 4,
-                    "startOffset": 17855,
+                    "startOffset": 18275,
                     "endColumn": 56,
-                    "endOffset": 17907
+                    "endOffset": 18327
                 },
                 "from": {
                     "file": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",
@@ -1680,11 +1701,11 @@
             },
             {
                 "to": {
-                    "startLine": 247,
+                    "startLine": 254,
                     "startColumn": 4,
-                    "startOffset": 17912,
+                    "startOffset": 18332,
                     "endColumn": 57,
-                    "endOffset": 17965
+                    "endOffset": 18385
                 },
                 "from": {
                     "file": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/values-v21/values-v21.xml",

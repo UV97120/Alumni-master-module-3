@@ -48,8 +48,16 @@
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
+        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/activity_contact__us.xml",
+        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/src/main/res/layout/activity_contact__us.xml"
+    },
+    {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/activity_main_home.xml",
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/src/main/res/layout/activity_main_home.xml"
+    },
+    {
+        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/fragment_student_corner.xml",
+        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/src/main/res/layout/fragment_student_corner.xml"
     },
     {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
@@ -70,6 +78,10 @@
     {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/search_view.xml",
+        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.miguelcatalan/materialsearchview/1.4.0/res/layout/search_view.xml"
     },
     {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
@@ -160,6 +172,14 @@
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_template_part_time.xml"
     },
     {
+        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/notice_row.xml",
+        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/src/main/res/layout/notice_row.xml"
+    },
+    {
+        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/student_row.xml",
+        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/src/main/res/layout/student_row.xml"
+    },
+    {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/src/main/res/layout/activity_main.xml"
     },
@@ -180,12 +200,20 @@
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/fragment_notice_corner.xml",
+        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/src/main/res/layout/fragment_notice_corner.xml"
+    },
+    {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_layout_tab_text.xml"
     },
     {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/nnf_filepicker_listitem_checkable.xml",
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.nononsenseapps/filepicker/2.5.3/res/layout/nnf_filepicker_listitem_checkable.xml"
+    },
+    {
+        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/activity_webview.xml",
+        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/src/main/res/layout/activity_webview.xml"
     },
     {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
@@ -238,6 +266,10 @@
     {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/suggest_item.xml",
+        "source": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/exploded-aar/com.miguelcatalan/materialsearchview/1.4.0/res/layout/suggest_item.xml"
     },
     {
         "merged": "/Users/razintailor/Downloads/Alumni-master-module-2/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",

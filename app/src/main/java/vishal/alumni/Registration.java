@@ -53,10 +53,13 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
     String bs64;//to convert filedata to bs64
     ImageView imgView;
     String newPath;
+    String fileName;
+
+    byte [] bytes;
 
     private static final int RESULT_LOAD_IMAGE = 1;
 
-    private static final String ServerAddress = "http://www.jarvismedia.tech/mayankwa/alumni/";
+    private static final String ServerAddress = "http://jarvismedia.tech/mayankwa/alumni/android-sync/json.php";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,9 +91,10 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
         loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Log.d("lodo", "activity khuli chutiya");
                 Intent i = new Intent(Registration.this, Login.class);
                 startActivity(i);
+
 
             }
 
@@ -113,7 +117,7 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
                 try {
                     InputStream inputStream = new FileInputStream(newPath);
 
-                    byte [] bytes;
+
 
                     byte[] buffer = new byte[8192];
 
@@ -130,6 +134,7 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
 
 
                     bytes = output.toByteArray();
+
                     bs64 = Base64.encodeToString(bytes, Base64.DEFAULT);
 
                 } catch (FileNotFoundException e) {
@@ -141,17 +146,14 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
                 }
 
 
-
-                String url = "http://www.jarvismedia.tech/mayankwa/alumni/json.php?name=" + name.getText().toString() + "&email=" + email.getText().toString() + "&year=" + ek.toString() + "&filename=" + FileName + "&filedata=" + bs64;//"http://192.168.1.6:5000/register";//";
-                Log.d("URL", url);
-
                 try {
-                    //jsonObject.put("fileData", bs64);
+                    jsonObject.put("fileData", bs64);
 
-                    jsonObject.put("Name", name.getText().toString());
+                    jsonObject.put("name", name.getText().toString());
                     jsonObject.put("email", email.getText().toString());
 
                     jsonObject.put("year", ek);
+                    jsonObject.put("fileName", fileName);
 
 
                 } catch (JSONException e) {
@@ -162,11 +164,11 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
 
 
                 Log.d("Test", jsonObject.toString());
-                Log.d("", jsonObject.toString());
+                //Log.d("", jsonObject.toString());
 
 
                 JsonObjectRequest jsObjRequest = new JsonObjectRequest
-                        (Request.Method.POST, url, jsonObject, new Response.Listener<JSONObject>() {
+                        (Request.Method.POST, ServerAddress, jsonObject, new Response.Listener<JSONObject>() {
 
                             @Override
                             public void onResponse(JSONObject response) {
@@ -217,6 +219,7 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
             }
         });
     }
+
 
     ;
 
@@ -275,6 +278,9 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
         Log.d("LatestPath" , newPath);
 
         String[] name = filepath.split("/");
+        fileName = name[name.length - 1];
+
+        Log.d("fileName",fileName);
 
         String fileNameTemp = name[(name.length)-1];
         FileName = fileNameTemp;
@@ -345,7 +351,7 @@ public class Registration extends Activity implements AdapterView.OnItemSelected
             }
 
         }*/
-        Toast.makeText(Registration.this, "Year Selected is" + mytext.getText(), Toast.LENGTH_LONG).show();
+       // Toast.makeText(Registration.this, "Year Selected is" + mytext.getText(), Toast.LENGTH_LONG).show();
     }
 
     @Override

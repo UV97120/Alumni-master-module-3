@@ -1,0 +1,9 @@
+<application>
+  <component name="ConsoleFoldingSettings">
+    <option name="addedPositive">
+      <list>
+        <option value="java.lang.RuntimeException: Unable to start activity ComponentInfo{vishal.alumini/vishal.alumini.HomeActivity}: android.view.InflateException: Binary XML file line #26: Error inflating class &lt;unknown&gt;" />
+      </list>
+    </option>
+  </component>
+</application>

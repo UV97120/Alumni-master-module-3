@@ -1,26 +1,26 @@
 [
     {
-        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
-        "source": "E:\\Android\\CollegeAlumni\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+        "merged": "E:\\Android\\Alumni-master-module-2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "E:\\Android\\Alumni-master-module-2\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
     },
     {
-        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_right_drawer.xml",
-        "source": "E:\\Android\\CollegeAlumni\\app\\src\\main\\res\\menu\\activity_right_drawer.xml"
+        "merged": "E:\\Android\\Alumni-master-module-2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "E:\\Android\\Alumni-master-module-2\\app\\src\\main\\res\\menu\\menu_main.xml"
     },
     {
-        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "E:\\Android\\CollegeAlumni\\app\\src\\main\\res\\menu\\main.xml"
+        "merged": "E:\\Android\\Alumni-master-module-2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_card_view_content.xml",
+        "source": "E:\\Android\\Alumni-master-module-2\\app\\src\\main\\res\\menu\\menu_card_view_content.xml"
     },
     {
-        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\menu\\picker_actions.xml",
-        "source": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\exploded-aar\\com.nononsenseapps\\filepicker\\2.5.3\\res\\menu\\picker_actions.xml"
+        "merged": "E:\\Android\\Alumni-master-module-2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "E:\\Android\\Alumni-master-module-2\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
-        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_card_view_content.xml",
-        "source": "E:\\Android\\CollegeAlumni\\app\\src\\main\\res\\menu\\menu_card_view_content.xml"
+        "merged": "E:\\Android\\Alumni-master-module-2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_right_drawer.xml",
+        "source": "E:\\Android\\Alumni-master-module-2\\app\\src\\main\\res\\menu\\activity_right_drawer.xml"
     },
     {
-        "merged": "E:\\Android\\CollegeAlumni\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
-        "source": "E:\\Android\\CollegeAlumni\\app\\src\\main\\res\\menu\\menu_main.xml"
+        "merged": "E:\\Android\\Alumni-master-module-2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\picker_actions.xml",
+        "source": "E:\\Android\\Alumni-master-module-2\\app\\build\\intermediates\\exploded-aar\\com.nononsenseapps\\filepicker\\2.5.3\\res\\menu\\picker_actions.xml"
     }
 ]

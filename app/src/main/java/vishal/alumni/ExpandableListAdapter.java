@@ -98,14 +98,24 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.list_group, null);
         }
 
-        TextView lblListHeader = (TextView) convertView
-                .findViewById(R.id.lblListHeader);
+        TextView lblListHeader = (TextView) convertView.findViewById(R.id.lblListHeader);
         lblListHeader.setTypeface(null, Typeface.BOLD);
         lblListHeader.setText(headerTitle);
+   //     StringBuilder title = new StringBuilder();
+        //return convertView;
+     /*   if(groupPosition != 0){
+            int imageResourceId = isExpanded ? android.R.drawable.arrow_up_float : android.R.drawable.arrow_down_float;
+            image.setImageResource(imageResourceId);
 
-        StringBuilder title = new StringBuilder();
-
+            image.setVisibility(View.VISIBLE);
+        } else {
+            image.setVisibility(View.INVISIBLE);
+        }*/
         return convertView;
+
+
+
+
     }
 
     @Override
@@ -119,4 +129,5 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
     }
+
 }

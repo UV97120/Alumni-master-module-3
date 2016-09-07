@@ -35,19 +35,19 @@ import java.util.List;
 import vishal.alumni.model.DataModel;
 
 public class MainActivity extends AppCompatActivity {
+    static View.OnClickListener myOnClickListener;
+    private static RecyclerView.Adapter adapter;
+    private static RecyclerView recyclerView;
+    private static ArrayList<DataModel> data;
+    private static ArrayList<Integer> removedItems;
+    /*   Back Pressed()  on double back exit application  */
+    private static long back_pressed;
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
     HashMap<String, List<String>> listDataChild;
-    private static RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private static RecyclerView recyclerView;
-    private static ArrayList<DataModel> data;
-    static View.OnClickListener myOnClickListener;
-    private static ArrayList<Integer> removedItems;
-
-
     DrawerLayout drawer;
+    private RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Registration.class);
                 startActivity(intent);
+//                Toast.makeText(this,"benchod",Toast.LENGTH_LONG).show();
 
             }
         });
@@ -161,6 +162,10 @@ public class MainActivity extends AppCompatActivity {
 
     // get the listview
         expListView = (ExpandableListView) findViewById(R.id.Exp);
+
+        //removes the standard group state indicator
+        assert expListView != null;
+        expListView.setGroupIndicator(null);
 
         // preparing list data
         prepareListData();
@@ -237,14 +242,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
+                                                /*  Expandable list view with drawer      */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -259,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-                                                /*  Expandable list view with drawer      */
+    /*----------------------  Exapndable List View With Drawer Over -----------------------   */
 
     /*
      * Preparing the list data (Expandable List view (Left Drawer))
@@ -301,8 +306,91 @@ public class MainActivity extends AppCompatActivity {
 //        listDataChild.put(listDataHeader.get(4), career);
     }
 
-    /*----------------------  Exapndable List View With Drawer Over -----------------------   */
 
+    /* -----------------------------Drawer List view----------------------------  */
+
+    public void DrawerListView() {
+        // Create List View
+        String[] myItems = {" HOME ", " AWARDS "};
+        String[] myItems2 ={" CONTACT ", " BLOG ", " ABOUT US ", " REGISTER "};
+
+        //Build Adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.listview_left_drawer, myItems);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.listview_left_drawer, myItems2);
+
+
+        // Configure The Listview
+        ListView list = (ListView) findViewById(R.id.list);
+        assert list != null;
+        list.setAdapter(adapter);
+
+        ListView list2 = (ListView) findViewById(R.id.list2);
+        assert list2 != null;
+        list2.setAdapter(adapter2);
+    }
+
+    public void Drawercallback() {
+        ListView list = (ListView) findViewById(R.id.list);
+        ListView list2 = (ListView) findViewById(R.id.list2);
+        assert list != null;
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                TextView textview = (TextView) viewClicked;
+                String message = "Clicked" + position + " name " + textview.getText().toString();
+                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+                if (position == 0) {
+                    //code specific to first list item
+                    Intent myIntent = new Intent(MainActivity.this, MainHomeActivity.class);
+                    startActivity(myIntent);
+                }
+                if (position == 1) {
+                    //code specific to second list item
+                    Intent myIntent5 = new Intent(MainActivity.this, Registration.class);
+                    startActivity(myIntent5);
+                }
+            }
+        });
+        assert list2 != null;
+        list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
+                TextView textview = (TextView) viewClicked;
+                String message = "Clicked" + position + " name " + textview.getText().toString();
+                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+                if (position == 0) {
+                    //code specific to first list item
+                    Intent myIntent = new Intent(MainActivity.this, MainHomeActivity.class);
+                    startActivity(myIntent);
+                }
+                if (position == 3) {
+                    //code specific to second list item
+                       Intent myIntent3 = new Intent(MainActivity.this, Registration.class);
+                       startActivity(myIntent3);
+                }
+            }
+        });
+
+
+
+    }
+
+    /* -------------------------- Left Drawer List view over   ----------------*/
+
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else if (drawer.isDrawerOpen(GravityCompat.END)) {  /*Closes the Appropriate Drawer*/
+            drawer.closeDrawer(GravityCompat.END);
+        } else {
+            if(back_pressed + 2000>System.currentTimeMillis()) super.onBackPressed();
+            else
+                Toast.makeText(getBaseContext(), "Press once again to exit", Toast.LENGTH_SHORT).show();
+            back_pressed = System.currentTimeMillis();
+            //super.onBackPressed();
+            //System.exit(0);
+        }
+    }
 
     /* -----------------------On Click Card View------------------------------*/
 private static class MyOnClickListener implements View.OnClickListener {
@@ -323,94 +411,6 @@ private static class MyOnClickListener implements View.OnClickListener {
 
 
 }
-
-
-    /* -----------------------------Drawer List view----------------------------  */
-
-    public void DrawerListView() {
-        // Create List View
-        String[] myItems = {" HOME ", " AWARDS "};
-        String[] myItems2 ={" CONTACT ", " BLOG ", " ABOUT US ", " REGISTER "};
-
-        //Build Adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.listview_left_drawer, myItems);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.listview_left_drawer, myItems2);
-
-
-        // Configure The Listview
-        ListView list = (ListView) findViewById(R.id.list);
-        list.setAdapter(adapter);
-
-        ListView list2 = (ListView) findViewById(R.id.list2);
-        list2.setAdapter(adapter2);
-    }
-
-    public void Drawercallback() {
-        ListView list = (ListView) findViewById(R.id.list);
-        ListView list2 = (ListView) findViewById(R.id.list2);
-        assert list != null;
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                TextView textview = (TextView) viewClicked;
-                String message = "Clicked" + position + " name " + textview.getText().toString();
-                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
-                if (position == 0) {
-                    //code specific to first list item
-                    Intent myIntent = new Intent(MainActivity.this, MainActivity.class);
-                    startActivity(myIntent);
-                }
-                if (position == 1) {
-                    //code specific to second list item
-                    Intent myIntent5 = new Intent(MainActivity.this, Registration.class);
-                    startActivity(myIntent5);
-                }
-            }
-        });
-        assert list2 != null;
-        list2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View viewClicked, int position, long id) {
-                TextView textview = (TextView) viewClicked;
-                String message = "Clicked" + position + " name " + textview.getText().toString();
-                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
-                if (position == 0) {
-                    //code specific to first list item
-                    Intent myIntent = new Intent(MainActivity.this, Contact.class);
-                    startActivity(myIntent);
-                }
-                if (position == 3) {
-                    //code specific to second list item
-                       Intent myIntent3 = new Intent(MainActivity.this, Registration.class);
-                       startActivity(myIntent3);
-                }
-            }
-        });
-
-
-
-    }
-
-    /* -------------------------- Left Drawer List view over   ----------------*/
-
-
-
-    /*   Back Pressed()  on double back exit application  */
-    private static long back_pressed;
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else if (drawer.isDrawerOpen(GravityCompat.END)) {  /*Closes the Appropriate Drawer*/
-            drawer.closeDrawer(GravityCompat.END);
-        } else {
-            if(back_pressed + 2000>System.currentTimeMillis()) super.onBackPressed();
-            else
-                Toast.makeText(getBaseContext(), "Press once again to exit", Toast.LENGTH_SHORT).show();
-            back_pressed = System.currentTimeMillis();
-            //super.onBackPressed();
-            //System.exit(0);
-        }
-    }
 
 
 }
